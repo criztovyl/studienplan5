@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
+    "clndr": "^1.4.6",
     "jquery": "^3.1.0",
     "sprintf": "^1.0.3",
     "underscore": "^1.8.3",
