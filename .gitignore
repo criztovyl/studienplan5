@@ -9,6 +9,10 @@ file_for_inspect.rb
 export*
 prog.rb
 
+# Bower
+node_modules
+bower_components
+
 # Other
 web/gc*.png
 
