@@ -1,1 +1,8 @@
-/* A comment, wiredep does not like empty files... */
+.clndr .clndr-grid .days-of-the-week .header-day, .clndr .clndr-grid .days .day {
+    width: 14.285714286%;
+    float: left;
+    height: 42px;
+}
+.clndr .clndr-grid .days .day.event {
+    color: red;
+}
