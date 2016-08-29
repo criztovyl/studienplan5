@@ -29,6 +29,7 @@
 
         <!-- Custom styles for this template -->
         <link href="cover.css" rel="stylesheet">
+        <link href="css.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -81,6 +82,33 @@
                                 </select>
                             </form>
                         </p>
+                        <div class="clndr">
+                            <script type="text/template" id="clndr-tmpl">
+<div class="clndr-controls row">
+                                <div class="col-xs-3 clndr-previous-button">&lsaquo;</div>
+                                    <div class="col-xs-6 month"><%= month %></div>
+                                        <div class="col-xs-3 clndr-next-button">&rsaquo;</div>
+                        </div>
+                        <div class="clndr-grid">
+                            <div class="days-of-the-week">
+                                <% _.each(daysOfTheWeek, function (day) { %>
+                                <div class="header-day"><%= day %></div>
+                                <% }); %>
+                                <div class="days">
+                                    <% _.each(days, function (day) { %>
+                                    <div class="<%= day.classes %>">
+                                    <%= day.day %>
+                                    <% _.each(day.events, function(event) { %> 
+                                    <br/><%= event.title %>
+                                    <% }); %>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                            <div class="clearfix"><div>
+                        </div>
+                            </script>
+                        </div>
                         <p>Alle .ics-Dateien kannst du <a href="SS16">hier</a> einsehen.</p> <!-- TODO: make SS16 "dynamic" -->
                         <p><a href="calhelp.html" target="_blank">Zur Hilfe, wie du den Kalendar verwenden kannst.</a></p>
                         <div id="icals" style="display: none;">
@@ -91,10 +119,10 @@
                     </div>
 
                     <!--
-                    <div class="inner cover" id="features">
+                        <div class="inner cover" id="features">
                         <h1 class="cover-heading">Funktionen</h1>
                         <p></p>
-                    </div>
+                        </div>
                     -->
 
                     <div class="inner cover" id="contact">
@@ -130,12 +158,18 @@
             ================================================== -->
             <!-- Placed at the end of the document so the pages load faster -->
             <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
             <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
             <script src="ie10-viewport-bug-workaround.js"></script>
 
-            <script type="text/javascript" src="sprintf.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.0.3/sprintf.js"></script>
+            <script>window.sprintf || document.write('<script src="bower_components/sprintf/dist/sprintf.min.js"><\/script>')</script>
+            <script src="bower_components/moment/min/moment.min.js"></script>
+            <script src="bower_components/underscore/underscore-min.js"></script>
+            <script src="bower_components/clndr/clndr.min.js"></script>
+            <script src="myclndr.js"></script>
             <script src="js.js"></script>
-            <script type="text/javascript">loadClasses("SS16");</script>
+            <script type="text/javascript">loadClasses();</script>
     </body>
 </html>

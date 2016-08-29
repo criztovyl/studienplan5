@@ -47,9 +47,9 @@ require "json/add/struct"
 require "optparse"
 require "fileutils"
 require "tzinfo"
-require "./clazz"
-require "./planelement"
-require "./util"; include StudienplanUtil
+require_relative "clazz"
+require_relative "planelement"
+require_relative "util"; include StudienplanUtil
 
 # Array for the plan.
 # Struc: Nested arrays.
