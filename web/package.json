@@ -1,0 +1,23 @@
+{
+  "name": "studienplan5-web",
+  "version": "0.1.0",
+  "description": "Web frontend for studienplan5",
+  "main": "index.html",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "gulp": "^3.9.1",
+    "main-bower-files": "^2.13.1",
+    "wiredep": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/criztovyl/studienplan5.git"
+  },
+  "author": "Christoph \"criztovyl\" Schulz",
+  "license": "GPL-3.0"
+}
