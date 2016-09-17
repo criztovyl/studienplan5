@@ -1,10 +1,17 @@
 # studienplan5.rb
 A utility to convert HTMLed-XLS Studienpläne into iCals.
 
+It's under heavy development, so please take a look at other [branches](https://github.com/criztovyl/studienplan5/branches).
+
 ## Requirements
 
  - Nokogiri
  - iCalendar
+
+With [Bundler](https://bundler.io/):
+
+    $ bundler install
+
 
 ## XLS -> HTML
 
@@ -21,7 +28,22 @@ or
 
 ## Usage
 
-Please see `ruby studienplan5.rb --help`.
+    Usage: ./studienplan5.rb [options] [FILE]
+
+    FILE is a HTMLed XLS Studienplan.
+    FILE is optional to be able to do -w/--web without reparsing everything.
+
+        -c, --calendar                   Generate iCalendar files to "ical" directory. (Change with --calendar-dir)
+        -j, --json                       Generate JSON data file (data.json).
+        -d, --classes                    Generate JSON classes structure (classes.json).
+        -o, --output NAME                Specify output target, if ends with slash, will be output directory. If not, will be name of calendar dir and suffix for JSON files.
+        -k, --disable-json-object-keys   Stringify hash keys.
+        -p, --json-pretty                Write pretty JSON data.
+        -w, --web                        Export simple web-page for browsing generated icals. Does nothing unless -o/--output is a directory.
+        -n, --calendar-dir NAME          Name for the diretory containing the iCal files. Program exits status 5 if -o/--output is specified and not a directory.
+        -u, --disable-unified            Do not create files that contain all parent events recursively.
+        -a, --disable-apache-config      Do not export .htaccess and other Apache-specific customizations.
+        -h, --help                       Print this help.
 
 ## JSON data file format
 
@@ -31,6 +53,8 @@ Please see `ruby studienplan5.rb --help`.
         generated: "%Y-%m-%d %H:%M:%S %z",
         data:  ...
     }
+
+`json_data_version` is 1.0
 
 ### When `json_object_keys` is true
 ...`data` is an nested Array. At index 0 are the real keys, at index 1 is the hash where the keys are the index of the real key.
