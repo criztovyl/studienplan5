@@ -122,6 +122,25 @@ This is for preserving the Hash key objects. (JSON does not allow objects as key
  - JAHRGANG: String; Name of the group of classes entered the training/studies in the same year.
  - GROUP: String; Group ID withing Jahrgang (one char)
 
+## Contribute
+
+Use a combination of [git flow](http://nvie.com/posts/a-successful-git-branching-model/), [git rebase](https://randyfay.com/node/91) and [GitHub](https://guides.github.com/introduction/flow/) workflows.
+
+First [fork the repo](https://github.com/criztovyl/studienplan5/fork).
+
+    $ git clone https://github.com/[Your User]/studienplan5
+    $ cd studienplan5
+    $ git checkout -b myfeature develop
+    ... do work, commits, etc... If you're done continue below.
+    $ git fetch origin
+    $ git rebase origin/develop
+    $ git checkout develop
+    $ git pull
+    $ git rebase myfeature
+    $ git push
+
+Finally create a pull request.
+
 ## Author
 
 Christoph "criztovyl" Schulz
