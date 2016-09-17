@@ -4,15 +4,25 @@ var mainBowerFiles = require('main-bower-files');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+var bc = "bower_components/"
+
 var dest = "dest";
 var files = ["*.html", "css/*", "js/*"].concat(mainBowerFiles());
+var fonts = [ bc + "bootstrap/dist/fonts/*" ];
 
 // bower task handles index.html
-gulp.task('default', function() {
+gulp.task('default', ['fonts'], function() {
     gulp.src(files, {base: '.'})
     .pipe(wiredep())
     .pipe(gulp.dest(dest));
 });
+
+
+gulp.task('fonts', function(){
+    gulp.src(fonts, {base: '.'})
+    .pipe(gulp.dest(dest));
+})
+
 
 gulp.task('clean', function() {
 });
