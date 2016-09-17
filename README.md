@@ -124,7 +124,7 @@ This is for preserving the Hash key objects. (JSON does not allow objects as key
 
 ## Contribute
 
-Use a combination of [git flow](http://nvie.com/posts/a-successful-git-branching-model/), [git rebase](https://randyfay.com/node/91) and [GitHub](https://guides.github.com/introduction/flow/) workflows.
+Use a combination of the [git flow](http://nvie.com/posts/a-successful-git-branching-model/), [git rebase](https://randyfay.com/node/91) and [GitHub](https://guides.github.com/introduction/flow/) workflows.
 
 First [fork the repo](https://github.com/criztovyl/studienplan5/fork).
 
