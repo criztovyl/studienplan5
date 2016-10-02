@@ -23,3 +23,7 @@ staging
 local
 data
 .gi_*
+dest
+dist
+*-dist
+*-dest
