@@ -16,12 +16,11 @@ bower_components
 # Other
 bower_components
 web/gc*.png
+tags
 
 # Publishing
-remote
-staging
-local
 data
+publishing
 .gi_*
 dest
 dist

@@ -1,165 +1,131 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="71cm" height="41cm" viewBox="-165 256 1419 808" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="52cm" height="30cm" viewBox="-222 414 1033 594" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
-    <rect style="fill: #ffffff" x="912.052" y="257.522" width="341.1" height="44"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="912.052" y="257.522" width="341.1" height="44"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1082.6" y="273.522">&lt;&lt;Struct&gt;&gt;</text>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1082.6" y="292.522">Clazz</text>
-    <rect style="fill: #ffffff" x="912.052" y="301.522" width="341.1" height="84"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="912.052" y="301.522" width="341.1" height="84"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="315.522">+name</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="331.522">+course</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="347.522">+cert</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="363.522">+jahrgang</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="379.522">+group</text>
-    <rect style="fill: #ffffff" x="912.052" y="385.522" width="341.1" height="244"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="912.052" y="385.522" width="341.1" height="244"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="399.522">+Clazz(name:string=nil,course:string=nil,</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="415.522">       cert:string=nil,jahrgang:string=nil,</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="431.522">       group:string=nil): Clazz</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="447.522">+Jahrgang(name:string): Clazz</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="462.022">{documentation = Jahrgang is Clazz with</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="476.022">only jahrgang set.}</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="498.522">+to_json(): string</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="514.522">+from_json(json:string)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="530.522">+simple(): string</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="545.022">{documentation = For a class:</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="559.022">"[class]([jahrgang])".</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="573.022">For a class with group:</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="587.022">"[class]-[group]([jahrgang])</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="915.052" y="601.022">For a jahrgang: "[jahrgang]".}</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.052" y="623.522">+to_s(): string</text>
+    <rect style="fill: #ffffff" x="-220.948" y="495.522" width="341.1" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-220.948" y="495.522" width="341.1" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-50.398" y="511.522">&lt;&lt;Struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-50.398" y="530.522">Clazz</text>
+    <rect style="fill: #ffffff" x="-220.948" y="539.522" width="341.1" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-220.948" y="539.522" width="341.1" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="553.522">+name</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="569.522">+course</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="585.522">+cert</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="601.522">+jahrgang</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="617.522">+group</text>
+    <rect style="fill: #ffffff" x="-220.948" y="623.522" width="341.1" height="244"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-220.948" y="623.522" width="341.1" height="244"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="637.522">+Clazz(name:string=nil,course:string=nil,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="653.522">       cert:string=nil,jahrgang:string=nil,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="669.522">       group:string=nil): Clazz</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="685.522">+Jahrgang(name:string): Clazz</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="700.022">{documentation = Jahrgang is Clazz with</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="714.022">only jahrgang set.}</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="736.522">+to_json(): string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="752.522">+from_json(json:string)</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="-217.948" y1="754.122" x2="-40.848" y2="754.122"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="768.522">+simple(): string</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="783.022">{documentation = For a class:</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="797.022">"[class]([jahrgang])".</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="811.022">For a class with group:</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="825.022">"[class]-[group]([jahrgang])</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-217.948" y="839.022">For a jahrgang: "[jahrgang]".}</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-217.948" y="861.522">+to_s(): string</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="443.856" y="670.192" width="479.7" height="44"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="443.856" y="670.192" width="479.7" height="44"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="683.706" y="686.192">&lt;&lt;Struct&gt;&gt;</text>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="683.706" y="705.192">PlanElement</text>
-    <rect style="fill: #ffffff" x="443.856" y="714.192" width="479.7" height="148"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="443.856" y="714.192" width="479.7" height="148"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="728.192">+title: string</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="744.192">+clazz: Clazz</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="760.192">+room: string</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="776.192">+time: DateTime</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="792.192">+dur: Fixnum</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="808.192">+lect: string</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="824.192">+nr: string</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="840.192">+special: Symbol</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="856.192">+more: string</text>
-    <rect style="fill: #ffffff" x="443.856" y="862.192" width="479.7" height="201"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="443.856" y="862.192" width="479.7" height="201"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="876.192">+PlanElement(name:string,clazz:Clazz,room:string=nil,</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="892.192">             time:DateTime=nil,dur:int=nil,</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="908.192">             lect:string=nil,nr:string=nil,</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="924.192">             special:Symbol=nil,more:string=nil): PlanElement</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="940.192">+FullWeek(title:string,clazz:Clazz,room:string,</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="956.192">          date:DateTime,more:string=nil): PlanElement</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="972.192">+format(obj,format:string="%s",empty:string="",</text>
-    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="446.856" y1="973.792" x2="808.756" y2="973.792"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="988.192">        opts:Array=[]): string</text>
-    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="508.456" y1="989.792" x2="677.856" y2="989.792"/>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="446.856" y="1002.69">-- Zur Diskussion --</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="1025.19">+to_json(): String</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="1041.19">+from_json(json:string)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="446.856" y="1057.19">+to_s(): string</text>
+    <rect style="fill: #ffffff" x="407.29" y="492.294" width="402.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="407.29" y="492.294" width="402.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="608.64" y="511.294">Plan</text>
+    <rect style="fill: #ffffff" x="407.29" y="520.294" width="402.7" height="185"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="407.29" y="520.294" width="402.7" height="185"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="534.294">-name: String</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="548.794">e.g. WS2015/16, SS2016, ...</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="571.294">-elements: Hash[]</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="585.794">An Array of Hashes.  (HashMap,</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="599.794">Dictionary, whatever)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="613.794">Common keys: title, class, room, time,</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="627.794">dur, lect, nr, special, more</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="641.794">(Ruby: Keys are Symbols)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="664.294">-extra: Hash</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="678.794">Common keys: classes</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="692.794">(Ruby: Keys are Symbols)</text>
+    <rect style="fill: #ffffff" x="407.29" y="705.294" width="402.7" height="301"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="407.29" y="705.294" width="402.7" height="301"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="719.294">+push_element()</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="733.794">Ruby: alias_method :push, :push_element</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="756.294">+add(title:String,clazz:Clazz,room:String,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="772.294">     time:DateTime,more:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="788.294">+add_full_week(name:String,clazz:Clazz,room:String,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="804.294">               time:DateTime,dur:int,lect:string,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="820.294">               special:String,more:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="836.294">+get_name(): String</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="850.794">Ruby: attr_reader :name</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="873.294">+get_elements(): Hash[]</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="887.794">Ruby: attr_reader :elements</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="910.294">+get_extra(): Hash</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="924.794">Ruby: attr_reader :extra</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="947.294">+to_s(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="963.294">+to_json(): String</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="410.29" y="977.794">Ruby: to_json(opts=nil)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="410.29" y="1000.29">+from_json(json_str:string)</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="410.29" y1="1001.89" x2="618.19" y2="1001.89"/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="408.29" y="376.294" width="187.1" height="44"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="408.29" y="376.294" width="187.1" height="44"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="501.84" y="392.294">&lt;&lt;Struct&gt;&gt;</text>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="501.84" y="411.294">Plan</text>
-    <rect style="fill: #ffffff" x="408.29" y="420.294" width="187.1" height="55"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="408.29" y="420.294" width="187.1" height="55"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="411.29" y="434.294">+name: String</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="411.29" y="448.794">bspw. WS2015/16,</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="411.29" y="462.794">SS2016, ...</text>
-    <rect style="fill: #ffffff" x="408.29" y="475.294" width="187.1" height="52"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="408.29" y="475.294" width="187.1" height="52"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="411.29" y="489.294">+to_json(): String</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="411.29" y="505.294">+from_json(json:string)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="411.29" y="521.294">+get_name()</text>
+    <rect style="fill: #ffffff" x="183.721" y="529.358" width="164" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="183.721" y="529.358" width="164" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="265.721" y="548.358">Extractor</text>
+    <rect style="fill: #ffffff" x="183.721" y="557.358" width="164" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="183.721" y="557.358" width="164" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.721" y="571.358">-file: I/O</text>
+    <rect style="fill: #ffffff" x="183.721" y="577.358" width="164" height="73"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="183.721" y="577.358" width="164" height="73"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.721" y="591.358">+Extractor(file:I/O)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.721" y="607.358">+extract(): Plan</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.721" y="623.358">+get_data(): Plan</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="186.721" y="637.858">Ruby: attr_reader :data</text>
+    <rect style="fill: #ffffff" x="301.721" y="527.358" width="54" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 6; stroke: #000000" x="301.721" y="527.358" width="54" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="596.346,451.794 703.768,451.794 703.768,443.522 911.082,443.522 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="705.768" y="444.658">Plan-&gt;Clazz</text>
-    <polygon style="fill: #000000" points="792.468,444.658 792.468,436.658 800.468,440.658 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="600.346" y="448.794"> Plan</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="600.346" y="464.794">1</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="907.082" y="440.522"> Klasse</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="907.082" y="456.522">*</text>
+    <rect style="fill: #ffffff" x="23" y="415" width="223.25" height="42"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="23" y="415" width="223.25" height="42"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="134.625" y="434">SemesterplanExtractor</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="134.625" y="449.5">XLS -&gt; HTML: loffice --convert-to html</text>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1082.6,654.694 1082.6,656.354 683.706,656.354 683.706,669.186 "/>
-    <polygon style="fill: #000000" points="1082.6,629.522 1087.4,643.522 1082.6,657.522 1077.8,643.522 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1082.6,629.522 1087.4,643.522 1082.6,657.522 1077.8,643.522 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="883.154" y="653.354">Klasse -&gt; PlanElement</text>
-    <polygon style="fill: #000000" points="966.004,653.354 966.004,645.354 974.004,649.354 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1093.6" y="641.522"> Klasse</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1093.6" y="657.522">1</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="687.706" y="649.186"> Element</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="687.706" y="665.186">*</text>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="265.721,508.114 265.721,484.178 134.625,484.178 134.625,458.005 "/>
+    <polygon style="fill: #ffffff" points="257.721,508.114 265.721,524.114 273.721,508.114 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="257.721,508.114 265.721,524.114 273.721,508.114 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="-19.279" y="383.357" width="164" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-19.279" y="383.357" width="164" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="62.721" y="402.357">Extractor</text>
-    <rect style="fill: #ffffff" x="-19.279" y="411.357" width="164" height="57"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-19.279" y="411.357" width="164" height="57"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-16.279" y="425.357">-file: I/O</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-16.279" y="441.357">-data: Plan</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-16.279" y="455.857">attr_reader</text>
-    <rect style="fill: #ffffff" x="-19.279" y="468.357" width="164" height="52"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-19.279" y="468.357" width="164" height="52"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-16.279" y="482.357">+Extractor(file:I/O)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-16.279" y="498.357">+extract(): Plan</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-16.279" y="514.357">+getData(): Plan</text>
-    <rect style="fill: #ffffff" x="98.721" y="381.357" width="54" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 6; stroke: #000000" x="98.721" y="381.357" width="54" height="8"/>
+    <rect style="fill: #ffffff" x="268" y="415" width="243.75" height="42"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="268" y="415" width="243.75" height="42"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="389.875" y="434">AusbildungsplanExtractor</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="389.875" y="449.5">PDF -&gt; JSON: Tabula</text>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="382.113,451.794 273.505,451.794 273.505,451.857 153.727,451.857 "/>
-    <polygon style="fill: #ffffff" points="407.284,451.794 393.284,456.594 379.284,451.794 393.284,446.994 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="407.284,451.794 393.284,456.594 379.284,451.794 393.284,446.994 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="265.721,508.114 265.721,484.178 389.875,484.178 389.875,458.005 "/>
+    <polygon style="fill: #ffffff" points="257.721,508.114 265.721,524.114 273.721,508.114 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="257.721,508.114 265.721,524.114 273.721,508.114 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="-163.081" y="555.522" width="218.55" height="56"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-163.081" y="555.522" width="218.55" height="56"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-53.8056" y="574.522">SemesterplanExtractor</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="-53.8056" y="590.022">ABB_Gesamtplan_Moodle.xls, mit</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="-53.8056" y="604.022">LibreOffice in HTML konvertiert</text>
-  </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="62.721,539.602 62.721,633.529 -53.8056,633.529 -53.8056,612.529 "/>
-    <polygon style="fill: #ffffff" points="70.721,539.602 62.721,523.602 54.721,539.602 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="70.721,539.602 62.721,523.602 54.721,539.602 "/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="101.719" y="554.822" width="243.75" height="56"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="101.719" y="554.822" width="243.75" height="56"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="223.594" y="573.822">AusbildungsplanExtractor</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="223.594" y="589.322">PDF vom Ausbildungsleiter, mit Tabula</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="223.594" y="603.322">in JSON konvertiert.</text>
-  </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="62.721,539.602 62.721,582.822 100.712,582.822 "/>
-    <polygon style="fill: #ffffff" points="70.721,539.602 62.721,523.602 54.721,539.602 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="70.721,539.602 62.721,523.602 54.721,539.602 "/>
-  </g>
-  <g>
-    <polygon style="fill: #ffffff" points="86.8213,669.474 385.421,669.474 397.421,681.474 397.421,831.474 86.8213,831.474 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="86.8213,669.474 385.421,669.474 397.421,681.474 397.421,831.474 86.8213,831.474 "/>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="385.421,669.474 385.421,681.474 397.421,681.474 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="93.8213" y="694.374">
-      <tspan x="93.8213" y="694.374">to_json():s lässt sich einfach mit</tspan>
-      <tspan x="93.8213" y="710.374">JSON.encode([Objekt]) implementieren.</tspan>
-      <tspan x="93.8213" y="726.374"></tspan>
-      <tspan x="93.8213" y="742.374">from_json(s) lässt sich einfach</tspan>
-      <tspan x="93.8213" y="758.374">mit JSON.decode(s, </tspan>
-      <tspan x="93.8213" y="774.374">:create_additions =&gt; true)</tspan>
-      <tspan x="93.8213" y="790.374">implementieren, wenn JSON mit</tspan>
-      <tspan x="93.8213" y="806.374">'require "json/add/struct"' importiert</tspan>
-      <tspan x="93.8213" y="822.374">wurde.</tspan>
+    <polygon style="fill: #ffffff" points="136.821,781.474 366.121,781.474 378.121,793.474 378.121,879.474 136.821,879.474 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="136.821,781.474 366.121,781.474 378.121,793.474 378.121,879.474 136.821,879.474 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="366.121,781.474 366.121,793.474 378.121,793.474 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="143.821" y="806.374">
+      <tspan x="143.821" y="806.374">Ruby:</tspan>
+      <tspan x="143.821" y="822.374">require "json/add/struct"</tspan>
+      <tspan x="143.821" y="838.374">JSON.generate(self, opts=nil)</tspan>
+      <tspan x="143.821" y="854.374">JSON.load(string, </tspan>
+      <tspan x="143.821" y="870.374">   :create_additions =&gt; true)</tspan>
     </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="406.284,749.294 265.721,749.294 265.721,675.53 "/>
+    <polygon style="fill: #ffffff" points="265.721,650.358 270.521,664.358 265.721,678.358 260.921,664.358 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="265.721,650.358 270.521,664.358 265.721,678.358 260.921,664.358 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="336.002" y="746.294">data</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="402.284" y="746.294">1</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="276.721" y="662.358">1</text>
   </g>
 </svg>
