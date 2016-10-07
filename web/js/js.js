@@ -20,7 +20,7 @@ Clazz.Jahrgang = function(name){
 
 Clazz.from_json = function(json){
     if(json["json_class"] == "Clazz"){
-        v = json["v"];
+        var v = json["v"];
         return new Clazz(v[0], v[1], v[2], v[3], v[4])
     }
     else {
@@ -34,9 +34,9 @@ Clazz.from_json = function(json){
 Clazz.prototype = {
     simple: function(no_jahrgang_for_class){
         if(this.full_name() != undefined){
-            str = this.full_name()
-                if(no_jahrgang_for_class == undefined)
-                    str += "(" + this.full_jahrgang() + ")";
+            var str = this.full_name();
+            if(no_jahrgang_for_class == undefined)
+                str += "(" + this.full_jahrgang() + ")";
             return str;
         }
         else if (this.jahrgang != undefined){
@@ -73,7 +73,7 @@ Clazz.prototype = {
         }
     },
     ical_file_name: function(){
-        name = this.jahrgang;
+        var name = this.jahrgang;
         if (this.full_name() != undefined)
             name += "-" + this.full_name();
         if(this.course != undefined)
@@ -84,9 +84,12 @@ Clazz.prototype = {
         if(unified)
             name += ".unified";
 
-        return name + ".ical"
+        return name + ".ical";
     },
     ical_file_link: function(into){
+
+        var loc, webcal_url, ical_link, links, container;
+
         loc = location.href.split("/"); loc.pop();
         webcal_url = loc.join("/").replace(/https?:\/\//, "webcal://");
 
@@ -119,14 +122,16 @@ function loadClasses(default_ical_dir){
         console.log("Loaded classes");
         classes = [[],[]]; // 0 - keys, 1 - values
 
-        json_data_version = data.json_data_version.split("."); // 0 - major, 1 - minor
+        var keyys, values;
+
+        var json_data_version = data.json_data_version.split("."); // 0 - major, 1 - minor
 
         if (json_data_version[0] == "1"){
 
             if(Number(json_data_version[1]) >= 1){
                 ical_dir = data.ical_dir;
                 unified = data.unified;
-                    default_ical_dir && console.info("Called loadClasses with a parameter but classes.json is new enough.");
+                default_ical_dir && console.info("Called loadClasses with a parameter but classes.json is new enough.");
             }
             else {
                 ical_dir = default_ical_dir || "ical";
@@ -138,17 +143,17 @@ function loadClasses(default_ical_dir){
                 values = data["data"][1];
 
                 $(document).ready(function(){
-                    select = $(".inner.cover#usage select")[0];
+                    var select = $(".inner.cover#usage select")[0];
                     $(select).html("");
                     $("<option>").html("Bitte auswählen...").attr("value", -1).appendTo(select);
 
                     $.each(keyys, function(index, element){
 
-                        key = Clazz.from_json(element);
+                        var key = Clazz.from_json(element);
                         classes[0].push(key);
                         $("<option>").html(key.full_name()).attr("value", index).appendTo(select);
 
-                        values_new = [];
+                        var values_new = [];
 
                         $.each(values[index], function(index, element){ // Attention, attention, ein Tann'bäumchen, ein Tann'bäumchen! values[index] => numeric key not index.
                             values_new.push(Clazz.from_json(element));
@@ -198,7 +203,7 @@ $(document).ready(function(){
     // // this script is free to use and distribute
     // // but please credit me and/or link to my site
     //
-    cloaked = 'join' + 'out' + '.com';
+    var cloaked = 'join' + 'out' + '.com';
     cloaked = cloaked.replace(".com", ".de");
     cloaked = ('ch' + '.schulz' + '@' + cloaked);
     $("#contact #mail a").attr("href", "mailto:" + cloaked).html(cloaked);
@@ -212,11 +217,11 @@ function hashChange(evt){
 
         console.log("Hash change!");
 
-        target = window.location.hash; // Location hash incl. #. Keep it.
+        var target = window.location.hash; // Location hash incl. #. Keep it.
         if(String(target)){
             $(".inner.cover").hide();
 
-            selection_match = target.match(/-selection-(\d+)$/);
+            var selection_match = target.match(/-selection-(\d+)$/);
             if(selection_match) target = target.replace(selection_match[0], "");
 
             $(".inner.cover"  + target).show();
@@ -224,7 +229,7 @@ function hashChange(evt){
             $(".nav li#curr-" + target.replace("#", "")).addClass("active");
 
             if(selection_match){
-                select = $(".inner.cover#usage select");
+                var select = $(".inner.cover#usage select");
                 if(select && select[0] && !select[0].disabled){
                     console.log("hashChange / getHashSelection:");
                     console.log(getHashSelection());
@@ -243,7 +248,7 @@ function hashChange(evt){
 var hashSelectionRE = /-selection-(\d+)$/;
 
 function getHashSelection(){
-    match = document.location.hash.match(hashSelectionRE);
+    var match = document.location.hash.match(hashSelectionRE);
     return match ? match[1] : match // It's undefined? Return undefined.
 }
 
@@ -258,8 +263,8 @@ function removeHashSelection(){
 }
 function classSelect(){
 
-    target = $($(".inner.cover#usage #icals ul#cal-links"))
-        target.html("");
+    var target = $($(".inner.cover#usage #icals ul#cal-links"))
+    target.html("");
 
     if(String(this.value) && this.value != -1){
 
