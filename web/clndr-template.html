@@ -1,0 +1,30 @@
+<div class="clndr-controls row">
+    <div class="col-xs-3 clndr-previous-button"><button class="btn btn-default">&larr;</button></div>
+    <div class="col-xs-6 month"><%= month %></div>
+    <div class="col-xs-3 clndr-next-button"><button class="btn btn-default">&rarr;</button></div>
+</div>
+
+<table class="clndr">
+    <thead>
+        <% _.each(daysOfTheWeek, function (day, index) { %>
+        <th class="header-day dow-<%= index %>"><%= day %></th>
+        <% }); %>
+    </thead>
+    <tbody>
+        <tr>
+        <% for(var i=0; i < days.length; i++) {%>
+        <td class="<%= days[i].classes %>">
+            <div>
+                <%= days[i].day %>
+                <% _.each(days[i].events, function(event) { %>
+                <br/><%= event.title %>
+                <% }); %>
+            </div>
+        </td>
+        <% if((i+1)%7 == 0){ %>
+        </tr><tr>
+        <% } %>
+        <% } %>
+        </tr>
+    </tbody>
+</table>

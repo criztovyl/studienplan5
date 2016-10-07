@@ -4,7 +4,12 @@
  * Part of studienplan5, a util to convert HTMLed-XLS Studienplände into iCal files.
  * https://github.com/criztovyl/studienplan5
  */
-var classes, ical_dir, unified;
+
+// Data w/ JS classes instead of JSON objects. 0 - keys, 1 - values, 2 - events
+var classes,
+    ical_dir,
+    unified,
+    events;
 
 function Clazz(name, course, cert, jahrgang, group){
     this.name = name;
@@ -12,6 +17,7 @@ function Clazz(name, course, cert, jahrgang, group){
     this.cert = cert;
     this.jahrgang = jahrgang;
     this.group = group;
+    this.isClazz = true;
 }
 
 Clazz.Jahrgang = function(name){
@@ -20,13 +26,13 @@ Clazz.Jahrgang = function(name){
 
 Clazz.from_json = function(json){
     if(json["json_class"] == "Clazz"){
-        v = json["v"];
+        var v = json["v"];
         return new Clazz(v[0], v[1], v[2], v[3], v[4])
     }
     else {
         console.warn(json["json_class"] + " is not a Clazz!");
-        console.log("-");
-        console.debug(json);
+        //console.log("-");
+        //console.debug(json);
         return false;
     }
 }
@@ -34,9 +40,9 @@ Clazz.from_json = function(json){
 Clazz.prototype = {
     simple: function(no_jahrgang_for_class){
         if(this.full_name() != undefined){
-            str = this.full_name()
-                if(no_jahrgang_for_class == undefined)
-                    str += "(" + this.full_jahrgang() + ")";
+            var str = this.full_name();
+            if(no_jahrgang_for_class == undefined)
+                str += "(" + this.full_jahrgang() + ")";
             return str;
         }
         else if (this.jahrgang != undefined){
@@ -73,7 +79,7 @@ Clazz.prototype = {
         }
     },
     ical_file_name: function(){
-        name = this.jahrgang;
+        var name = this.jahrgang;
         if (this.full_name() != undefined)
             name += "-" + this.full_name();
         if(this.course != undefined)
@@ -84,9 +90,12 @@ Clazz.prototype = {
         if(unified)
             name += ".unified";
 
-        return name + ".ical"
+        return name + ".ical";
     },
     ical_file_link: function(into){
+
+        var loc, webcal_url, ical_link, links, container;
+
         loc = location.href.split("/"); loc.pop();
         webcal_url = loc.join("/").replace(/https?:\/\//, "webcal://");
 
@@ -111,52 +120,117 @@ Clazz.prototype = {
         }
         else
             return links;
-    }
+    },
+    equals: function(clazz){
+        return this.name == clazz.name &&
+            this.course == clazz.course &&
+            this.cert == clazz.cert &&
+            this.jahrgang == clazz.jahrgang &&
+            this.group == clazz.group;
+    },
 }
 
 function loadClasses(default_ical_dir){
     $.ajax("classes.json").done(function(data){
         console.log("Loaded classes");
-        classes = [[],[]]; // 0 - keys, 1 - values
 
-        json_data_version = data.json_data_version.split("."); // 0 - major, 1 - minor
+        var keyys, values, ical_dir, unified;
+
+        var json_data_version = data.json_data_version.split("."); // 0 - major, 1 - minor
 
         if (json_data_version[0] == "1"){
 
             if(Number(json_data_version[1]) >= 1){
                 ical_dir = data.ical_dir;
                 unified = data.unified;
-                    default_ical_dir && console.info("Called loadClasses with a parameter but classes.json is new enough.");
+                default_ical_dir && console.info("Called loadClasses with a parameter but classes.json is new enough.");
             }
             else {
                 ical_dir = default_ical_dir || "ical";
                 unified = false;
             }
 
-            if(data.json_object_keys){
-                keyys = data["data"][0];
-                values = data["data"][1];
+            switch(Number(json_data_version[1])){
+                case 2:
+                    if(data.data.json_object_keys){
+                        keyys = data.data.keys;
+                        values = data.data.values;
+                    }
+                    else {
+                        console.error("Is no object with json_object_keys!");
+                    }
+                    break;
+                case 1:
+
+                    if(data.json_object_keys){
+                        keyys = data["data"][0];
+                        values = data["data"][1];
+
+                    }
+                    else {
+                        console.error("Stringified keys are not supportet yet.");
+                    }
+                    break;
+                default:
+                    console.error("Unsupported 1.x version.");
+                    break;
+
+            }
+        }
+        else {
+            console.error("Unknown/Unspported JSON data version: " + json_data_version.join("."));
+        }
+
+        if(keyys){
+            $.get("data.json", function(data_evts){
+
+                events = data_evts;
+                console.log("Loaded events");
 
                 $(document).ready(function(){
-                    select = $(".inner.cover#usage select")[0];
-                    $(select).html("");
+
+                    classes = [[], [], []];
+
+                    var log = [];
+
+                    var select = $(".inner.cover#usage select").first();
+
+                    // This popultates both the classes var and the HTML select, why to two loops when we can do one?
+
+                    console.log("Document ready");
+
+                    select.html("");
                     $("<option>").html("Bitte auswählen...").attr("value", -1).appendTo(select);
 
                     $.each(keyys, function(index, element){
 
-                        key = Clazz.from_json(element);
-                        classes[0].push(key);
-                        $("<option>").html(key.full_name()).attr("value", index).appendTo(select);
+                        var o_key = Clazz.from_json(element); // Key as Clazz Object
+                        var o_values = []; // Values as Clazz Objects
 
-                        values_new = [];
+                        classes[0].push(o_key);
+                        $("<option>").html(o_key.full_name()).attr("value", index).appendTo(select);
 
-                        $.each(values[index], function(index, element){ // Attention, attention, ein Tann'bäumchen, ein Tann'bäumchen! values[index] => numeric key not index.
-                            values_new.push(Clazz.from_json(element));
+
+                        // Outer "index" is a numeric key, no index. "values" is an Object no Array.
+                        $.each(values[index], function(index, element){
+                            o_values.push(Clazz.from_json(element))
                         });
 
-                        classes[1].push(values_new);
+                        classes[1].push(o_values);
 
+                        var start = Date.now();
 
+                        classes[2].push(_.filter(events.data, function(o){
+                            return Clazz.from_json(o.class).equals(o_key);
+                        }));
+
+                        log.push({class: o_key, time: Date.now()-start, events: classes[2][classes[2].length-1]});
+                    });
+
+                    $.each(classes[2], function(index, events){
+                        $.each(events, function(index, event){
+                            event.class = Clazz.from_json(event.class);
+                        });
                     });
 
                     $(select).removeAttr("disabled");
@@ -168,16 +242,14 @@ function loadClasses(default_ical_dir){
                         console.log(getHashSelection());
                         $(select).change();
                     }
+
+                    console.log(log);
                 });
-            }
-            else {
-                console.error("Stringified keys are not supportet yet.");
-            }
+            });
         }
         else {
-            console.error("Unknown/Unspported JSON data version: " + json_data_version.join("."));
+            console.error("Could not process classes! (empty)");
         }
-
     });
 }
 
@@ -198,7 +270,7 @@ $(document).ready(function(){
     // // this script is free to use and distribute
     // // but please credit me and/or link to my site
     //
-    cloaked = 'join' + 'out' + '.com';
+    var cloaked = 'join' + 'out' + '.com';
     cloaked = cloaked.replace(".com", ".de");
     cloaked = ('ch' + '.schulz' + '@' + cloaked);
     $("#contact #mail a").attr("href", "mailto:" + cloaked).html(cloaked);
@@ -212,11 +284,11 @@ function hashChange(evt){
 
         console.log("Hash change!");
 
-        target = window.location.hash; // Location hash incl. #. Keep it.
+        var target = window.location.hash; // Location hash incl. #. Keep it.
         if(String(target)){
             $(".inner.cover").hide();
 
-            selection_match = target.match(/-selection-(\d+)$/);
+            var selection_match = target.match(/-selection-(\d+)$/);
             if(selection_match) target = target.replace(selection_match[0], "");
 
             $(".inner.cover"  + target).show();
@@ -224,7 +296,7 @@ function hashChange(evt){
             $(".nav li#curr-" + target.replace("#", "")).addClass("active");
 
             if(selection_match){
-                select = $(".inner.cover#usage select");
+                var select = $(".inner.cover#usage select");
                 if(select && select[0] && !select[0].disabled){
                     console.log("hashChange / getHashSelection:");
                     console.log(getHashSelection());
@@ -243,7 +315,7 @@ function hashChange(evt){
 var hashSelectionRE = /-selection-(\d+)$/;
 
 function getHashSelection(){
-    match = document.location.hash.match(hashSelectionRE);
+    var match = document.location.hash.match(hashSelectionRE);
     return match ? match[1] : match // It's undefined? Return undefined.
 }
 
@@ -258,8 +330,8 @@ function removeHashSelection(){
 }
 function classSelect(){
 
-    target = $($(".inner.cover#usage #icals ul#cal-links"))
-        target.html("");
+    var target = $($(".inner.cover#usage #icals ul#cal-links"))
+    target.html("");
 
     if(String(this.value) && this.value != -1){
 

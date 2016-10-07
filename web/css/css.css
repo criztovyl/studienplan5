@@ -1,8 +1,32 @@
-.clndr .clndr-grid .days-of-the-week .header-day, .clndr .clndr-grid .days .day {
+/*
+.clndr .clndr-grid .days-of-the-week .header-day,
+.clndr .clndr-grid .days .day {
     width: 14.285714286%;
     float: left;
-    height: 42px;
+    min-height: 42px;
+    border-bottom: white solid 1px;
 }
 .clndr .clndr-grid .days .day.event {
     color: red;
+}
+*/
+table.clndr {
+    width: 100%;
+}
+
+table.clndr th {
+    text-align: center;
+    width: 14.285714286%;
+}
+
+table.clndr td {
+    border: solid 1px white;
+}
+
+table.clndr div {
+    min-height: 42px;
+}
+
+table.clndr td.adjacent-month {
+    color: gray;
 }
