@@ -9,6 +9,10 @@ file_for_inspect.rb
 export*
 prog.rb
 
+# Bower
+node_modules
+bower_components
+
 # Other
 bower_components
 web/gc*.png
@@ -18,3 +22,7 @@ tags
 data
 publishing
 .gi_*
+dest
+dist
+*-dist
+*-dest

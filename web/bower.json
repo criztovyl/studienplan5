@@ -1,0 +1,37 @@
+{
+  "name": "web",
+  "homepage": "https://github.com/criztovyl/studienplan5",
+  "authors": [
+    "Christoph \"criztovyl\" Schulz <ch.schulz@joinout.de>"
+  ],
+  "description": "studienplan5 web front-end",
+  "main": "index.html",
+  "license": "GPLv3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "clndr": "^1.4.6",
+    "jquery": "^3.1.0",
+    "sprintf": "^1.0.3",
+    "underscore": "^1.8.3",
+    "bootstrap3-ie10-viewport-bug-workaround": "https://github.com/Haixing-Hu/bootstrap3-ie10-viewport-bug-workaround.git#d6fb76b",
+    "bootstrap": "^3.3.7"
+  },
+  "resolutions": {
+    "bootstrap3-ie10-viewport-bug-workaround": "d6fb76b"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.min.css"
+      ]
+    }
+  }
+}

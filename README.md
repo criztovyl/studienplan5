@@ -1,10 +1,17 @@
 # studienplan5.rb
 A utility to convert HTMLed-XLS Studienpläne into iCals.
 
+It's under heavy development, so please take a look at other [branches](https://github.com/criztovyl/studienplan5/branches).
+
 ## Requirements
 
  - Nokogiri
  - iCalendar
+
+With [Bundler](https://bundler.io/):
+
+    $ bundler install
+
 
 ## XLS -> HTML
 
@@ -21,7 +28,22 @@ or
 
 ## Usage
 
-Please see `ruby studienplan5.rb --help`.
+    Usage: ./studienplan5.rb [options] [FILE]
+
+    FILE is a HTMLed XLS Studienplan.
+    FILE is optional to be able to do -w/--web without reparsing everything.
+
+        -c, --calendar                   Generate iCalendar files to "ical" directory. (Change with --calendar-dir)
+        -j, --json                       Generate JSON data file (data.json).
+        -d, --classes                    Generate JSON classes structure (classes.json).
+        -o, --output NAME                Specify output target, if ends with slash, will be output directory. If not, will be name of calendar dir and suffix for JSON files.
+        -k, --disable-json-object-keys   Stringify hash keys.
+        -p, --json-pretty                Write pretty JSON data.
+        -w, --web                        Export simple web-page for browsing generated icals. Does nothing unless -o/--output is a directory.
+        -n, --calendar-dir NAME          Name for the diretory containing the iCal files. Program exits status 5 if -o/--output is specified and not a directory.
+        -u, --disable-unified            Do not create files that contain all parent events recursively.
+        -a, --disable-apache-config      Do not export .htaccess and other Apache-specific customizations.
+        -h, --help                       Print this help.
 
 ## JSON data file format
 Below the format of `data.json` and `classes.json`. For the value definitions see below.
@@ -114,6 +136,25 @@ Any object that has a `json_object_keys` set to true has the following structure
 
 #### 1.01
 Soon.
+
+## Contribute
+
+Use a combination of the [git flow](http://nvie.com/posts/a-successful-git-branching-model/), [git rebase](https://randyfay.com/node/91) and [GitHub](https://guides.github.com/introduction/flow/) workflows.
+
+First [fork the repo](https://github.com/criztovyl/studienplan5/fork).
+
+    $ git clone https://github.com/[Your User]/studienplan5
+    $ cd studienplan5
+    $ git checkout -b myfeature develop
+    ... do work, commits, etc... If you're done continue below.
+    $ git fetch origin
+    $ git rebase origin/develop
+    $ git checkout develop
+    $ git pull
+    $ git rebase myfeature
+    $ git push
+
+Finally create a pull request.
 
 ## Author
 
