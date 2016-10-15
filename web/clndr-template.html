@@ -15,10 +15,12 @@
         <% for(var i=0; i < days.length; i++) {%>
         <td class="<%= days[i].classes %>">
             <div>
-                <%= days[i].day %>
+                <span class="pull-right"><%= days[i].day %></span>
+                <ul>
                 <% _.each(days[i].events, function(event) { %>
-                <br/><%= event.title %>
+                <li><%= event.title %></li>
                 <% }); %>
+                </ul>
             </div>
         </td>
         <% if((i+1)%7 == 0){ %>
