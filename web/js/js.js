@@ -9,7 +9,8 @@
 var classes,
     ical_dir,
     unified,
-    events;
+    events,
+    calendar;
 
 function Clazz(name, course, cert, jahrgang, group){
     this.name = name;
@@ -345,6 +346,16 @@ function classSelect(){
 
         classes[0][this.value].ical_file_link($("<li>")).appendTo(target);
 
+        calendar.fullCalendar('removeEventSources');
+        calendar.fullCalendar('addEventSource', _.map(classes[2][this.value], function(o){
+            o.start = o.time;
+            if(o.special == "fullWeek"){
+                o.end = moment(o.time).add(5, "days");
+                o.allDay = true;
+            }
+            return o;
+        }));
+
         if(!unified){
             $.each(classes[1][this.value], function(index, element){
                 element.ical_file_link($("<li>")).appendTo(target);
@@ -356,6 +367,13 @@ function classSelect(){
     }
     else{
         $(".inner.cover#usage #icals").hide();
+        calendar.fullCalendar('removeEventSources');
         console.log("select.value -1");
     }
 }
+
+// FullCalendar
+
+$(document).ready(function(){
+    calendar = $(".calendar").fullCalendar({"locale": "de"});
+});
