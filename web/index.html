@@ -79,6 +79,33 @@
                                 </select>
                             </form>
                         </p>
+                        <div class="clndr">
+                            <script type="text/template" id="clndr-tmpl">
+<div class="clndr-controls row">
+                                <div class="col-xs-3 clndr-previous-button">&lsaquo;</div>
+                                    <div class="col-xs-6 month"><%= month %></div>
+                                        <div class="col-xs-3 clndr-next-button">&rsaquo;</div>
+                        </div>
+                        <div class="clndr-grid">
+                            <div class="days-of-the-week">
+                                <% _.each(daysOfTheWeek, function (day) { %>
+                                <div class="header-day"><%= day %></div>
+                                <% }); %>
+                                <div class="days">
+                                    <% _.each(days, function (day) { %>
+                                    <div class="<%= day.classes %>">
+                                    <%= day.day %>
+                                    <% _.each(day.events, function(event) { %>
+                                    <br/><%= event.title %>
+                                    <% }); %>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                            <div class="clearfix"><div>
+                        </div>
+                            </script>
+                        </div>
                         <p>Alle .ics-Dateien kannst du <a href="SS16">hier</a> einsehen.</p> <!-- TODO: make SS16 "dynamic" -->
                         <p><a href="calhelp.html" target="_blank">Zur Hilfe, wie du den Kalendar verwenden kannst.</a></p>
                         <div id="icals" style="display: none;">
@@ -132,6 +159,7 @@
             <!-- endbower -->
 
             <script src="js/js.js"></script>
+            <script src="js/myclndr.js"></script>
             <script type="text/javascript">loadClasses();</script>
     </body>
 </html>
