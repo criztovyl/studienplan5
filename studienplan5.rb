@@ -119,6 +119,24 @@ OptionParser.new do |opts|
         puts opts
         exit
     end
+    
+    data1, data2 = nil
+        
+    opts.on("-s", "--semesterplan", "Read from 'Semesterplan'.") do |studienplan|
+        unless ARGV[0].nil? or ARGV[0].empty?
+            File.open(ARGV[0], "rb") do |f| data1 = SemesterplanExtractor.new(f).extract; end
+        else
+            $logger.info "No file(s)."
+        end
+    end
+    
+    opts.on("-b", "--ausbildungsplan", "Read from 'Ausbildungsplan'") do |ausbildungsplan|
+        unless ARGV[1].nil? or ARGV[1].empty?
+            File.open(ARGV[1], "rb") do |f| data2 = ExtractorAusbildungsplan.new(f).extract; end
+        else
+            $logger.info "No file(s)."
+        end
+    end
 
 end.parse!
 
@@ -152,17 +170,17 @@ end
 
 data = nil
 
-if file1 = ARGV[0] and file2 = ARGV[1]
-
-    data1, data2 = nil
-
-    File.open(file1, "rb") do |f| data1 = SemesterplanExtractor.new(f).extract; end
-    File.open(file2, "rb") do |f| data2 = ExtractorAusbildungsplan.new(f).extract; end
-
-    data = data1.merge data2
-else
-    $logger.info "No file(s)."
-end
+#if file1 = ARGV[0] and file2 = ARGV[1]
+#
+#   data1, data2 = nil
+#
+#    File.open(file1, "rb") do |f| data1 = SemesterplanExtractor.new(f).extract; end
+#    File.open(file2, "rb") do |f| data2 = ExtractorAusbildungsplan.new(f).extract; end
+#
+#    data = data1.merge data2
+#else
+#    $logger.info "No file(s)."
+#end
 
 # unified: :only_self, :no_self, nil
 #  :only_self : only self elements
